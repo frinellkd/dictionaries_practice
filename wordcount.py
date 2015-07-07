@@ -1,15 +1,16 @@
-filename = open("test.txt")
+filename = open("twain.txt")
  
 words_count = {}
 
 for lines in filename:
-    line_list = lines.rstrip()
-    stripped_line_list = line_list.split(" ")
+    stripped_line_list = lines.rstrip()
+    lower_line_list = stripped_line_list.upper()
+    split_line_list = lower_line_list.split(" ")
 
 #for each word in line_list make each word a key and give a value of 0
 
 
-    for word in stripped_line_list:
+    for word in split_line_list:
         if word in words_count:
             words_count[word] = words_count[word] + 1
         else:
